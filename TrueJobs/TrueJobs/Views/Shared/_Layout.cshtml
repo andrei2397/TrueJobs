@@ -15,7 +15,7 @@
     <link href="~/Content/css/ionicons/css/ionicons.min.css" rel="stylesheet" />
     <link href="~/Content/css/lightbox.min.css" rel="stylesheet" />
     <link href="~/Content/css/style.css" rel="stylesheet" />
-   
+
 </head>
 <body @*style="background-color: #88ff4d"*@>
 
@@ -39,42 +39,37 @@
                 </div>
             </div>
         </div>*@
-    
-    
+
+
     <!--==========================
       Header
     ============================-->
-    <header id="header">
-        <div class="container-fluid">
 
-            <div id="logo" class="pull-left">
-                <h1><a href="@Url.Action("Index", "Home")" class="scrollto">TrueJobs</a></h1>
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+        <header id="header">
+            <div class="container-fluid">
+
+                <div id="logo" class="pull-left">
+                    <h1><a href="@Url.Action("Index", "Home")" class="scrollto">TrueJobs</a></h1>
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+                </div>
+
+
+                @Html.Partial("_LoginPartial")
+
             </div>
+        </header><!-- #header -->
 
-        
-                    @Html.Partial("_LoginPartial")
-             
-        </div>
-    </header><!-- #header -->
+  
 
 
-
-    @RenderBody()
     
-    <footer id="footer" >
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong>TrueJobs</strong>. All Rights Reserved
-            </div>
-
-        </div>
-        @*© Copyright TrueJobs. All Rights Reserved *@
-    </footer>
-
+        @RenderBody()
+  
+     
+    
     @*@Scripts.Render("~/bundles/jquery")
-      @Scripts.Render("~/bundles/bootstrap")*@
+        @Scripts.Render("~/bundles/bootstrap")*@
 
     <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/jquery-migrate.min.js"></script>

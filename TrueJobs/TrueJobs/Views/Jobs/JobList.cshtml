@@ -10,6 +10,34 @@
         .overlay:hover {
             box-shadow: 0 0 25px rgba(33,33,33,.2);
         }
+
+    .mycont {
+        display: block;
+        /*margin: 0 auto;*/
+        height: 40px;
+        line-height: 40px;
+        width: 300px;
+        padding: 0px 20px 0px 100px;
+   
+    }
+
+    .mydiv {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 40px;
+         display:inline-block;
+    }
+
+    i {
+        float: left; 
+        color: white;
+        display: inline-block;
+    }
+
+    .my-icon {
+        line-height: 40px;
+    }
 </style>
 @foreach (var item in Model)
 {
@@ -33,8 +61,24 @@
             <div class=" img-responsive" style="height:200px"></div>
             <div class="overlay" onclick="location.href='@Url.Action("Details", "Jobs", new { id = item.Job_ID })'">
 
+
                 <h4>@item.Name</h4>
-                <p><a href="@Url.Action("Details", "Jobs", new { id = item.Job_ID })">Detalii</a></p>
+
+                <p><a href="@Url.Action("Details", "Jobs", new { id = item.Job_ID })">More details </a></p>
+                <br />
+
+                @*<h5 style="position:relative;"><i class="fa fa-user">@item.Company.Name</i>@item.Company.Name</h5>*@
+
+                <div class="mycont">
+                    <i class="fa fa-building-o my-icon"></i>
+                    <h5 class="mydiv">@item.Company.Name</h5>
+                </div>
+               
+                <div class="mycont">
+                    <i class="fa fa-map-marker my-icon"></i>
+                    <h5 class="mydiv">@item.Location</h5>
+                </div>
+
 
             </div>
         </div>
