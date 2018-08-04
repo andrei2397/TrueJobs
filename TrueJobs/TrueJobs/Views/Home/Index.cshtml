@@ -151,7 +151,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
             </header>
 
-            <div class="skills-content">
+            @*<div class="skills-content">
 
                 <div class="progress">
                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
@@ -177,7 +177,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div>*@
 
         </div>
     </section>
@@ -196,23 +196,23 @@
             <div class="row counters">
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">274</span>
-                    <p>Clients</p>
+                    <span data-toggle="counter-up">@ViewBag.userCount</span>
+                    <p>Users</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">421</span>
-                    <p>Projects</p>
+                    <span data-toggle="counter-up">@ViewBag.companyCount</span>
+                    <p>Companies</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">1,364</span>
-                    <p>Hours Of Support</p>
+                    <span data-toggle="counter-up">@ViewBag.jobsCount</span>
+                    <p>Jobs</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">18</span>
-                    <p>Hard Workers</p>
+                    <span data-toggle="counter-up">@ViewBag.interestsCount</span>
+                    <p>Interests</p>
                 </div>
 
             </div>
