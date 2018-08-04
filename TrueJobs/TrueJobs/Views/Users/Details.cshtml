@@ -46,17 +46,35 @@
             <h3>Profilul meu</h3>
             <div class="row">
                 <div class="col-md-3">
-                    <div class="box box-primary">
-                        <div class="box-body box-profile">
+                    <div class="  box box-primary">
+                        <div class=" box-body box-profile ">
                             <img class="profile-user-img img-responsive img-circle" src="~/imgpoze/@Model.Photo" alt="User picture">
 
                             <h3 class="profile-username text-center">@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h3>
 
-                            @if (User.IsInRole("candidat"))
-                            {
-                                <a href="@Url.Action("Edit", "Users", new { id = ViewBag.userID })" class="btn btn-default"><b>Edit profile</b></a>
-                            }
-                            <a href="@Url.Action("Details", "WriteCVs", new { id = ViewBag.writecv })" class="btn btn-default"><b>View CV</b></a>
+
+
+                            
+                            
+                                    @if (User.IsInRole("candidat"))
+                                    {
+                                        <a href="@Url.Action("Edit", "Users", new { id = ViewBag.userID })" class="btn btn-default"><b>Edit profile</b></a>
+                                    }
+                                
+                             
+                                    <a href="@Url.Action("Details", "WriteCVs", new { id = ViewBag.writecv })" class="btn btn-default"><b>View CV</b></a>
+
+                            
+                                    <a href="@Url.Action("SetPassword", "Manage")" class="btn btn-default" style="margin-top:15px"><b>Change password</b></a>
+
+                                
+                     
+
+
+
+
+
+
 
                             @*<ul class="list-group list-group-unbordered">
                                     <li class="list-group-item">
@@ -131,7 +149,7 @@
                             @if (User.IsInRole("candidat"))
                             {
                                 <li><a href="#timeline" data-toggle="tab">Aplicarile mele</a></li>
-                            }   
+                            }
                         </ul>
                         <div class="tab-content">
                             <div class="active tab-pane" id="activity">

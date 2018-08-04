@@ -44,6 +44,7 @@
                         <h3 class="profile-username text-center">@Html.DisplayFor(model => model.Name)</h3>
 
                         <a href="@Url.Action("Edit", "Companies", new { id = ViewBag.compId })" class="btn btn-default"><b>Edit profile</b></a>
+                        <a href="@Url.Action("SetPassword", "Manage")" class="btn btn-default" style="margin-top:15px"><b>Change password</b></a>
                     </div>
                     <br /><br />
                 </div>

@@ -442,6 +442,23 @@ namespace TrueJobs.Controllers
             base.Dispose(disposing);
         }
 
+
+        public ActionResult Profil()
+        {
+            var nume = User.Identity.Name;
+            User usr = db.Users.Where(u => u.Email == nume).FirstOrDefault();
+
+            if (User.IsInRole("companie"))
+            {
+                return RedirectToAction("Details", "Companies", new { email = User.Identity.Name });
+            }else if(User.IsInRole("candidat"))
+            {
+                return RedirectToAction("Details", "Users", new { email = User.Identity.Name });
+            }
+            return View();
+            
+        }
+
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
